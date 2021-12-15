@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "web-profile",
+  "alias": ["lamhieu.info"],
+  "routes": [
+    {
+      "src": "/swr.js",
+      "dest": "/_next/static/sw.js",
+      "headers": {
+        "cache-control": "max-age=43200",
+        "Service-Worker-Allowed": "/"
+      }
+    }
+  ],
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "silent": true
+  }
+}
